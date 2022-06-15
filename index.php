@@ -126,7 +126,7 @@ if ($_POST) {
                         <input type="text" name="txtNombre" id="txtNombre" class="form-control shadow" value="<?php echo isset($aClientes[$id]) ? $aClientes[$id]["nombre"] : "" ?>" required>
                     </div>
                     <div class="mt-2">
-                        <label for="txtTelefono">Telefono: *</label>
+                        <label for="txtTelefono">Teléfono: *</label>
                         <input type="text" name="txtTelefono" id="txtTelefono" class="form-control shadow" value="<?php echo isset($aClientes[$id]) ? $aClientes[$id]["telefono"] : "" ?>" required>
                     </div>
                     <div class="mt-2">
@@ -152,6 +152,7 @@ if ($_POST) {
                                 <th scope="col">Imagen</th>
                                 <th scope="col">DNI</th>
                                 <th scope="col">Nombre</th>
+                                <th scope="col">Teléfono</th>
                                 <th scope="col">Correo</th>
                                 <th scope="col">Acciones</th>
                             </tr>
@@ -173,6 +174,7 @@ if ($_POST) {
                                         <td><img src="imagenes/<?php echo $cliente["nombreImagen"]; ?>" style="width: 150px; height: 150px; border-radius: 5px; object-fit: fill;"></td>
                                         <td><?php echo $cliente["dni"]; ?></td>
                                         <td><?php echo $cliente["nombre"]; ?></td>
+                                        <td><a href="tel:<?php echo $cliente["telefono"]; ?>"><?php echo $cliente["telefono"]; ?></a></td>
                                         <td><a href="mailto:<?php echo $cliente["correo"]; ?>"><?php echo $cliente["correo"]; ?></a></td>
                                         <td style="font-size: 18px;">
                                             <a href="https://api.whatsapp.com/send?phone=+54<?php echo $cliente["telefono"] ?>&text=Hola <?php echo $cliente["nombre"] ?>"><i class="fa-brands fa-whatsapp"></i></a>

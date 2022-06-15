@@ -86,7 +86,6 @@ if ($_POST) {
     file_put_contents("archivo.txt", $strJson);
 }
 
-
 ?>
 
 

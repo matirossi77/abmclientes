@@ -136,7 +136,7 @@ if ($_POST) {
                     <div class="mt-2">
                         <label for="archivo">Archivo Adjunto: </label>
                         <input type="file" name="archivo" id="archivo" accept=".jpg, .jpeg, .png" class="form-control shadow">
-                        <p class="mt-1">Archivos admitidos: .jpg, .jpeg, .png</p>
+                        <p class="mt-1"><b>Archivos admitidos: .jpg, .jpeg, .png</b></p>
                     </div>
                     <div class="mt-1">
                         <button type="submit" name="btnGuardar" class="btn btn-primary">Guardar</button>
@@ -169,7 +169,6 @@ if ($_POST) {
                                 foreach ($aClientes as $pos => $cliente) {
 
                             ?>
-
                                     <tr>
                                         <td><img src="imagenes/<?php echo $cliente["nombreImagen"]; ?>" style="width: 150px; height: 150px; border-radius: 5px; object-fit: fill;"></td>
                                         <td><?php echo $cliente["dni"]; ?></td>
@@ -183,7 +182,7 @@ if ($_POST) {
                                                 <i class="fa-solid fa-trash"></i>
                                             </a>
                                             <?php
-
+                                            //Para mostrar los datos en el modal antes de eliminar el cliente
                                             $nombreClienteModal = $aClientes[$pos]["nombre"];
                                             $dniClienteModal = $aClientes[$pos]["dni"];
                                             $correoClienteModal = $aClientes[$pos]["correo"];
